@@ -1,0 +1,24 @@
+@use "../../partials/palette";
+@use "../../partials/mixins";
+@use "../../partials/breakpoints";
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__select {
+    border-radius: 5px;
+    padding: 3px 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__ascending {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
