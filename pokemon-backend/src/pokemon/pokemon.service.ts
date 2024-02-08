@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { CreatePokemonDTO } from './dto/create-pokemon.dto';
 import { InjectRepository } from '@mikro-orm/nestjs';
 import { Pokemon } from './entities/pokemon.entity';
@@ -14,6 +14,13 @@ export class PokemonService {
     private readonly pokemonRepository: EntityRepository<Pokemon>,
   ) {}
   async create(data: CreatePokemonDTO): Promise<Pokemon> {
+    const existingPokemon = await this.pokemonRepository.findOne({
+      name: data.name,
+    });
+
+    if (existingPokemon) {
+      throw new ConflictException('a Pokemon with this name already exists');
+    }
     const newPokemon = plainToInstance(Pokemon, data);
     this.pokemonRepository.create(newPokemon);
     await this.pokemonRepository.getEntityManager().persistAndFlush(newPokemon);
