@@ -31,7 +31,9 @@
 
 ### :dart: Features
 
-- Creating, Reading, Updating, and Deleting pokemon
+- Creating, Reading, Updating, and Deleting Pokemon
+- Sorting Pokemon
+- Search for a Pokemon by name or type
 - Reusable code
 - Mobile-responsive
 - User-friendly
