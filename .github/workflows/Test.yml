@@ -12,14 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout Repository
+        uses: actions/checkout@v1
         with:
-          path: "pokemon-backend"
+          working-directory: pokemon-backend
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install
+
+      - name: Install Dependencies
         run: npm install
-      - name: Test
+        working-directory: pokemon-backend
+
+      - name: Run Tests
         run: npm test
+        working-directory: pokemon-backend

@@ -1,7 +1,7 @@
 # Pokemon
 
-[![Tests Passing](https://github.com/Behzadsharafi/EmployeeCreator/actions/workflows/test.yml/badge.svg)](https://github.com/Behzadsharafi/EmployeeCreator/actions/workflows/Test.yml)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Behzadsharafi/EmployeeCreator/blob/main/LICENSE)
+[![Tests Passing](https://github.com/Behzadsharafi/Pokemon/actions/workflows/Test.yml/badge.svg)](https://github.com/Behzadsharafi/Pokemon/actions/workflows/Test.yml)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Behzadsharafi/Pokemon/blob/main/LICENSE)
 
 <div align='center'>
 
