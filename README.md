@@ -41,56 +41,72 @@
 
 ### :running: Run Locally
 
-Clone the project
+Clone the project.
 
 ```bash
   git clone git@github.com:Behzadsharafi/Pokemon.git
 ```
 
-To run the backend navigate to pokemon-backend
+To run the backend navigate to pokemon-backend.
 
 ```bash
   cd Pokemon/pokemon-backend
 ```
 
-Install dependencies
+Install dependencies.
 
 ```bash
   npm install
 ```
 
-Create the database
+Create .env file in root of backend. Use the .env.example as a guide
+
+```.env
+DB_HOST="127.0.0.1"
+DB_USER=root
+DB_PASSWORD=TypeYourPassword //Comment out if not using a password for MySQL
+DB_NAME=pokemon
+DB_PORT=3306
+```
+
+If your MySQL doesn't have a password you need to open mikro-orm.config.ts and comment out the following line
+
+```ts
+ password: process.env.DB_PASSWORD,
+```
+
+Create the database.
 
 ```bash
 npx mikro-orm database:create
 ```
 
-Create a migration
+Create a migration.
 
 ```bash
 npx mikro-orm migration:create --initial
 npx mikro-orm migration:up
 ```
 
-Run the backend in watch mode
+Run the backend in watch mode.
 
 ```bash
 npm run start:dev
 ```
 
-To run the front end navigate to the frontend directory
+To run the front end navigate to the frontend directory.
 
 ```bash
    cd Pokemon/pokemon-frontend
 ```
 
-Install dependencies
+Install dependencies.
 
 ```bash
   npm install
 ```
 
-Start the server
+Start the server.
 
 ```bash
   npm run dev
