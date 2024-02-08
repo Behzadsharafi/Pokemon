@@ -363,3 +363,10 @@ template {
 [hidden] {
   display: none;
 }
+
+.backgroundImage {
+  position: fixed;
+  z-index: -10;
+  opacity: 0.3;
+  background-size: cover;
+}
