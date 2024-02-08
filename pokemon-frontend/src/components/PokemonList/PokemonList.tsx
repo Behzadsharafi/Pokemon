@@ -30,9 +30,13 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
 
   useEffect(() => {
     if (searchTerm !== null && searchTerm !== "") {
-      if (pokemonTypes.includes(searchTerm)) {
+      if (
+        pokemonTypes
+          .map((pokemonType) => pokemonType.type)
+          .includes(searchTerm.toLowerCase())
+      ) {
         const filtered = pokemons?.filter(
-          (pokemon) => pokemon.type === searchTerm
+          (pokemon) => pokemon.type === searchTerm.toLowerCase()
         );
         let sortedPokemons: Pokemon[] = [];
         if (filtered) {

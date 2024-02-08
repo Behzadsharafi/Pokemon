@@ -4,7 +4,6 @@
 
 .card {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   gap: 15px;
   min-width: 200px;
@@ -17,27 +16,38 @@
     flex-direction: row;
   }
 
-  &__info {
+  &__details {
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
-
-  &__actions {
-    display: flex;
-    gap: 15px;
-
-    @include mixins.phone_sm {
+    &__info {
+      display: flex;
       flex-direction: column;
       gap: 5px;
     }
 
-    p {
-      cursor: pointer;
+    &__actions {
+      display: flex;
+      gap: 15px;
 
-      &:hover {
-        text-decoration: underline;
+      @include mixins.phone_sm {
+        flex-direction: column;
+        gap: 5px;
       }
+
+      p {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__image {
+    & img {
+      width: 50px;
     }
   }
 }

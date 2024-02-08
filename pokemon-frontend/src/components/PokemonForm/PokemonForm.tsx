@@ -142,9 +142,10 @@ const PokemonForm: React.FC<PokemonFormProps> = ({
             defaultValue={getDefaultVal("type") as string}
           >
             <option value="">Select type</option>
-            {pokemonTypes.map((type, index) => (
-              <option key={index} value={type}>
-                {type.toUpperCase()}
+            {pokemonTypes.map((pokemonType, index) => (
+              <option key={index} value={pokemonType.type}>
+                {pokemonType.type.charAt(0).toUpperCase() +
+                  pokemonType.type.slice(1).toLowerCase()}
               </option>
             ))}
           </select>

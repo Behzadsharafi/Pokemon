@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <div className={styles.page}>
       <section className={styles.page__topSection}>
-        <h2>Play With Pokemons!</h2>
+        <h2>Play With Pokemon!</h2>
         <Button
           onClick={() => navigate(`/add`)}
           className={styles.page__topSection__button}
