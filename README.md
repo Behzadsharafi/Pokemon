@@ -96,7 +96,7 @@ Run the backend in watch mode.
 npm run start:dev
 ```
 
-To run the front end navigate to the frontend directory.
+To run the frontend navigate to the frontend directory.
 
 ```bash
    cd Pokemon/pokemon-frontend
