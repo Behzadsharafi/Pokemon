@@ -108,6 +108,13 @@ Install dependencies.
   npm install
 ```
 
+Navigate to pokemon-frontend/src/services/backend-services.ts.
+Change the host domain to http://localhost:3000/
+
+```bash
+  npm run dev
+```
+
 Start the server.
 
 ```bash

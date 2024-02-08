@@ -9,7 +9,7 @@ import {
 
 interface Props {
   searchTerm: any;
-  sortBy: "level" | "maxHp";
+  sortBy: "level" | "maxHp" | "";
   asc: boolean;
 }
 
@@ -40,11 +40,14 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
         );
         let sortedPokemons: Pokemon[] = [];
         if (filtered) {
-          sortedPokemons = filtered
-            .slice()
-            .sort((a, b) =>
-              asc === true ? a[sortBy] - b[sortBy] : b[sortBy] - a[sortBy]
+          sortedPokemons = filtered.slice();
+          if (sortBy !== "") {
+            sortedPokemons.sort((a, b) =>
+              asc === true && sortBy
+                ? a[sortBy] - b[sortBy]
+                : b[sortBy] - a[sortBy]
             );
+          }
         }
         setPokemons(sortedPokemons);
       } else {
@@ -53,11 +56,12 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
         );
         let sortedPokemons: Pokemon[] = [];
         if (filtered) {
-          sortedPokemons = filtered
-            .slice()
-            .sort((a, b) =>
+          sortedPokemons = filtered.slice();
+          if (sortBy !== "") {
+            sortedPokemons.sort((a, b) =>
               asc === true ? a[sortBy] - b[sortBy] : b[sortBy] - a[sortBy]
             );
+          }
         }
         setPokemons(sortedPokemons);
       }
@@ -66,11 +70,12 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
         .then((res) => {
           let sortedPokemons: Pokemon[] = [];
           if (res) {
-            sortedPokemons = res
-              .slice()
-              .sort((a, b) =>
+            sortedPokemons = res.slice();
+            if (sortBy !== "") {
+              sortedPokemons.sort((a, b) =>
                 asc === true ? a[sortBy] - b[sortBy] : b[sortBy] - a[sortBy]
               );
+            }
           }
           setPokemons(sortedPokemons);
         })

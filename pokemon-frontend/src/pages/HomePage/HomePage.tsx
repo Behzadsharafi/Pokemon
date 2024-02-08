@@ -9,7 +9,7 @@ import Sort from "../../components/Sort/Sort";
 const HomePage = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState<null | string>(null);
-  const [sortBy, setSortBy] = useState<"level" | "maxHp">("level");
+  const [sortBy, setSortBy] = useState<"level" | "maxHp" | "">("");
   const [asc, setAsc] = useState(true);
 
   const searchHandler = (searchTerm: string | null) => {

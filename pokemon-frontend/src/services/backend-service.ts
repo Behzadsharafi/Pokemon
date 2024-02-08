@@ -4,7 +4,8 @@ import {
   UpdatePokemonDTO,
 } from "../scripts/interfaces";
 
-const hostDomain = `http://localhost:3000/`;
+// const hostDomain = `http://localhost:3000/`;
+const hostDomain = `https://testrepo-production-d475.up.railway.app/`;
 
 export const getAllPokemon = async (): Promise<Pokemon[]> => {
   //// fetch data
@@ -15,7 +16,6 @@ export const getAllPokemon = async (): Promise<Pokemon[]> => {
   }
 
   const data = await response.json();
-  console.log(data);
   return data;
 };
 
@@ -67,7 +67,6 @@ export const updatePokemonById = async (
   const formattedData = {
     ...data,
   };
-  console.log(formattedData);
 
   const response = await fetch(`${hostDomain}pokemon/${id}`, {
     method: "PATCH",

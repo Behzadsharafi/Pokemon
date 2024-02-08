@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Sort.module.scss";
 
 interface Props {
-  sortBy: "level" | "maxHp";
-  setSortBy: (sortBy: "level" | "maxHp") => void;
+  sortBy: "level" | "maxHp" | "";
+  setSortBy: (sortBy: "level" | "maxHp" | "") => void;
   asc: boolean;
   setAsc: (asc: boolean) => void;
 }
@@ -24,6 +24,7 @@ const Sort = ({ sortBy, setSortBy, asc, setAsc }: Props) => {
         value={sortBy}
         className={styles.sort__select}
       >
+        <option value=""></option>
         <option value="maxHp">MaxHp</option>
         <option value="level">Level</option>
       </select>{" "}

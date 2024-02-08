@@ -5,12 +5,13 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://zadpokemon.netlify.app/'],
   });
 
   app.useGlobalPipes(
     new ValidationPipe({ enableDebugMessages: true, whitelist: true }),
   );
-  await app.listen(3000);
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
 }
 bootstrap();
