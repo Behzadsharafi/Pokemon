@@ -1,4 +1,4 @@
-[![Tests Passing](https://github.com/Behzadsharafi/Pokemon/actions/workflows/test.yml/badge.svg?v=1)](https://github.com/Behzadsharafi/Pokemon/actions/workflows/test.yml)
+[![Tests Passing](https://github.com/Behzadsharafi/Pokemon/actions/workflows/test.yml/badge.svg)](https://github.com/Behzadsharafi/Pokemon/actions/workflows/test.yml)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Behzadsharafi/Pokemon/blob/main/LICENSE)
 
 <div align='center'>
