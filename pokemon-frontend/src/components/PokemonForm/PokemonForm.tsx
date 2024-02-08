@@ -29,7 +29,6 @@ const PokemonForm: React.FC<PokemonFormProps> = ({
 }: PokemonFormProps) => {
   const [errorMess, setErrorMess] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const getDefaultVal = (
     fieldName: keyof UpdatePokemonDTO | keyof CreatePokemonDTO,
