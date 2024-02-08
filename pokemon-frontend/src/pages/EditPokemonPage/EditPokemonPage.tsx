@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Pokemon } from "../../scripts/interfaces";
 import { getPokemonById } from "../../services/backend-service";
+import Loader from "../../components/Loader/Loader";
 // import { Pokemons } from "../../services/pokemon-service";
 
 const AddPokemonPage = () => {
@@ -44,6 +45,7 @@ const AddPokemonPage = () => {
           Back
         </Button>
       </section>
+      {loading && <Loader />}
 
       {!loading && pokemon && <PokemonForm pokemon={pokemon} />}
     </div>

@@ -6,6 +6,7 @@ import {
   deletePokemonById,
   getAllPokemon,
 } from "../../services/backend-service";
+import Loader from "../Loader/Loader";
 
 interface Props {
   searchTerm: any;
@@ -17,15 +18,18 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
   const [pokemons, setPokemons] = useState<Pokemon[] | null>(null);
   const [errorMess, setErrorMess] = useState("");
   const [deleteErrorMess, setDeleteErrorMess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     setErrorMess(errorMess ? "" : errorMess);
 
     getAllPokemon()
       .then((res) => {
         setPokemons(res);
       })
-      .catch((err) => setErrorMess(err.message));
+      .catch((err) => setErrorMess(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -113,6 +117,7 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
 
   return (
     <>
+      {loading && <Loader />}
       {pokemons && pokemons.length < 1 && (
         <p className={styles.emptyList}>You Still Don't Have any Pokemon!</p>
       )}{" "}

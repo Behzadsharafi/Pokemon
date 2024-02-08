@@ -27,6 +27,10 @@ interface FormData extends yup.InferType<typeof schema> {}
 const PokemonForm: React.FC<PokemonFormProps> = ({
   pokemon,
 }: PokemonFormProps) => {
+  const [errorMess, setErrorMess] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const getDefaultVal = (
     fieldName: keyof UpdatePokemonDTO | keyof CreatePokemonDTO,
     manualDefault: string | number | null | undefined = undefined
@@ -39,9 +43,6 @@ const PokemonForm: React.FC<PokemonFormProps> = ({
   };
 
   const navigate = useNavigate();
-
-  const [errorMess, setErrorMess] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formSubmit = async (data: FormData) => {
     const formattedData = { ...data };
