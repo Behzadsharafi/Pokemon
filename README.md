@@ -127,7 +127,7 @@ Please read the [Code of Conduct](https://github.com/Behzadsharafi/Pokemon/blob/
 ## :computer: Built With
 
 - [React](https://react.dev/): frontend
-- [TypeScripttypescript](https://www.typescriptlang.org/): frontend
+- [TypeScript](https://www.typescriptlang.org/): frontend
 - [SASS](https://sass-lang.com/): styling
 - [MySQL](https://www.mysql.com/): database
 - [Nest](https://nestjs.com/): backend
