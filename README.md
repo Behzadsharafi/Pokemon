@@ -6,7 +6,7 @@
 <h1> :leaves: Pokemon API :dragon:  </h1>
 <p>A full-stack Pokemon application with standard CRUD operations. The backend is in Nest TypeScript and MySQL, and the frontend is in React TypeScript.</p>
 
-<h4> <span> ·  <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Report a Bug </a> <span> · </span> <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Request a Feature </a> </h4>
+<h4> <a href="https://zadpokemon.netlify.app/">View Live Site</a><span> ·  <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Report a Bug </a> <span> · </span> <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Request a Feature </a> </h4>
 
 </div>
 
