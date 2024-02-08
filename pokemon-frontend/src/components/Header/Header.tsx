@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.content__title}>Pokemon API</h1>
+        <h1 className={styles.content__title}>Pokémon API</h1>
       </div>
     </div>
   );

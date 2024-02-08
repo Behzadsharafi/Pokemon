@@ -119,7 +119,7 @@ const PokemonList = ({ searchTerm, sortBy, asc }: Props) => {
     <>
       {loading && <Loader />}
       {pokemons && pokemons.length < 1 && (
-        <p className={styles.emptyList}>You Still Don't Have any Pokemon!</p>
+        <p className={styles.emptyList}>There are no Pokémon to show!</p>
       )}{" "}
       <div className={styles.list}>
         {pokemons?.map((pokemon) => (

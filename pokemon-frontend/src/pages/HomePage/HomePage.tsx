@@ -19,12 +19,12 @@ const HomePage = () => {
   return (
     <div className={styles.page}>
       <section className={styles.page__topSection}>
-        <h2>Play With Pokemon!</h2>
+        <h2>Play With Pokémon!</h2>
         <Button
           onClick={() => navigate(`/add`)}
           className={styles.page__topSection__button}
         >
-          Add New Pokemon
+          Add New Pokémon
         </Button>
         <Sort sortBy={sortBy} setSortBy={setSortBy} asc={asc} setAsc={setAsc} />
       </section>
