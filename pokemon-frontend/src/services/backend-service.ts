@@ -5,7 +5,7 @@ import {
 } from "../scripts/interfaces";
 
 // const hostDomain = `http://localhost:3000/`;
-const hostDomain = `https://testrepo-production-d475.up.railway.app/`;
+const hostDomain = `https://pokemon-production-0187.up.railway.app/`;
 
 export const getAllPokemon = async (): Promise<Pokemon[]> => {
   //// fetch data
