@@ -5,7 +5,6 @@ import styles from "./AppContainer.module.scss";
 import HomePage from "../../pages/HomePage/HomePage";
 import AddPokemonPage from "./../../pages/AddPokemonPage/AddPokemonPage";
 import EditPokemonPage from "../../pages/EditPokemonPage/EditPokemonPage";
-import PokemonPage from "../../pages/PokemonPage/PokemonPage";
 
 const AppContainer = () => {
   return (
@@ -15,7 +14,6 @@ const AppContainer = () => {
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/:id" element={<PokemonPage />} />
             <Route path="/:id/edit" element={<EditPokemonPage />} />
             <Route path="/add" element={<AddPokemonPage />} />
           </Routes>
