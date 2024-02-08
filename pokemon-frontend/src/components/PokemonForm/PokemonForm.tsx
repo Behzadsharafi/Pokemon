@@ -156,7 +156,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({
           <Button type="submit">Submit</Button>
         </div>
       </form>
-      {errorMess && <p>{errorMess}</p>}
+      {errorMess && <p className={styles.error}>{errorMess}</p>}
       {isSubmitting && <p>Submitting....</p>}
     </Paper>
   );
