@@ -5,7 +5,7 @@
 
 <div align='center'>
 
-<h1> :bulbasaur: Pokemon API :charmander:  </h1>
+<h1> :bird: Pokemon API :dragon:  </h1>
 <p>A full-stack Pokemon with standard CRUD operations. The backend is in Nest TypeScript and MySQL, and the frontend is in React TypeScript.</p>
 
 <h4> <span> ·  <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Report a Bug </a> <span> · </span> <a href="https://github.com/Behzadsharafi/Pokemon/issues"> Request a Feature </a> </h4>
