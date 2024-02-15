@@ -9,6 +9,7 @@ import {
 } from 'class-validator';
 
 enum PokemonType {
+  NORMAL = 'normal',
   FIRE = 'fire',
   WATER = 'water',
   GRASS = 'grass',
